@@ -25,7 +25,7 @@
 启动Andriod
     [Arguments]    ${app}
     Run Keyword And Continue On Failure    Open Application    http://0.0.0.0:4723/wd/hub    platformName=Android    platformVersion=6.0    deviceName=P4M7N15510010692    app=/Users/wupinglan/Documents/workSpace/automation/res/app/android/${app}
-    ...    appPackage=com.ebnews    appActivity=.activity.SplashActivity
+    ...    appPackage=com.ebnews    appActivity=.activity.SplashActivity    noReset=true
     等待
     左滑
     等待
