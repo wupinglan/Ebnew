@@ -7,7 +7,7 @@
     Click Element    ${test}
 
 等待
-    sleep    10
+    sleep    15
 
 输入
     [Arguments]    ${element}    ${text}
@@ -48,10 +48,16 @@
     点击    xpath=//android.widget.TextView[contains(@text,'登录/注册')]
 
 用户名
-    输入    id=com.ebnews:id/login_username    18610851331
+    [Arguments]    ${text}
+    输入    id=com.ebnews:id/login_username    ${text}
 
 密码
-    输入    id=com.ebnews:id/login_pwd    wupinglan123
+    [Arguments]    ${text}
+    输入    id=com.ebnews:id/login_pwd    ${text}
 
 登录按钮
     点击    id=com.ebnews:id/login_tv
+
+检查文本
+    [Arguments]    ${text}
+    Page Should Contain Text    ${text}
