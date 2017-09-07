@@ -1,0 +1,13 @@
+*** Settings ***
+Resource          基础关键字.txt
+
+*** Keywords ***
+登录
+    启动Andriod    Ebnew_V4.4.0_线上.apk
+    等待
+    我的
+    等待
+    登录/注册
+    用户名
+    密码
+    登录按钮

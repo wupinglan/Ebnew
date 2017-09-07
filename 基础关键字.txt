@@ -1,0 +1,57 @@
+*** Keywords ***
+左滑
+    Swipe    1000    1080    13    1080    1000
+
+点击
+    [Arguments]    ${test}
+    Click Element    ${test}
+
+等待
+    sleep    10
+
+输入
+    [Arguments]    ${element}    ${text}
+    Input Value    ${element}    ${text}
+
+我知道了
+    点击    id=com.ebnews:id/guide_news_btn
+
+立即体验
+    点击    id=com.ebnews:id/rlStart
+
+截图
+    Capture Page Screenshot
+
+启动Andriod
+    [Arguments]    ${app}
+    Run Keyword And Continue On Failure    Open Application    http://0.0.0.0:4723/wd/hub    platformName=Android    platformVersion=6.0    deviceName=P4M7N15510010692    app=/Users/wupinglan/Documents/workSpace/automation/res/app/android/${app}
+    ...    appPackage=com.ebnews    appActivity=.activity.SplashActivity
+    等待
+    左滑
+    等待
+    左滑
+    等待
+    左滑
+    等待
+    立即体验
+    我知道了
+
+启动IOS
+    [Arguments]    ${app}
+    Open Application    http://0.0.0.0:4723/wd/hub    platformName=ios    platformVersion=10.2    udid=6A69CA14-42FF-4878-87A9-6A26F322995E    app=${app}    deviceName=iPhone
+    ...    automationName=XCUITest
+
+我的
+    点击    xpath=//android.widget.TextView[contains(@text,'我的')]
+
+登录/注册
+    点击    xpath=//android.widget.TextView[contains(@text,'登录/注册')]
+
+用户名
+    输入    id=com.ebnews:id/login_username    18610851331
+
+密码
+    输入    id=com.ebnews:id/login_pwd    wupinglan123
+
+登录按钮
+    点击    id=com.ebnews:id/login_tv

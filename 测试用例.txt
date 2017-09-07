@@ -1,0 +1,7 @@
+*** Settings ***
+Library           AppiumLibrary
+Resource          业务关键字.txt
+
+*** Test Cases ***
+search
+    登录
