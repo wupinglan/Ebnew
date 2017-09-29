@@ -1,4 +1,4 @@
-*** Keywords ***
+﻿*** Keywords ***
 左滑
     Swipe    1000    1080    13    1080    1000
 
@@ -110,7 +110,6 @@
 
 提交
     点击    xpath=//android.widget.TextView[contains(@text,'提交')]
-
 上滑
     Swipe    130    1588    130    838    1000
 
