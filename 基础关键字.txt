@@ -1,16 +1,14 @@
-*** Keywords ***
+﻿*** Keywords ***
 左滑
     Swipe    1000    1080    13    1080    1000
 
 点击
-    [Arguments]    ${test}
     Click Element    ${test}
 
 等待
     sleep    10
 
 输入
-    [Arguments]    ${element}    ${text}
     Input Value    ${element}    ${text}
 
 我知道了
@@ -23,17 +21,9 @@
     Capture Page Screenshot
 
 启动Android
-    [Arguments]    ${app}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    Run Keyword And Continue On Failure    Open Application    http://localhost:4723/wd/hub    platformName=Android    platformVersion=7.0    deviceName=TWGDU16603004489    app=D:\Ebnew_V4.4.2_测试.apk
-    ...    appPackage=com.ebnews    appActivity=.activity.SplashActivity
-=======
-=======
->>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
     Run Keyword And Continue On Failure    Open Application    http://localhost:4723/wd/hub    platformName=Android    platformVersion=5.0    deviceName=c238b674    app=/Users/wupinglan/Documents/workSpace/automation/res/app/android/${app}
     ...    appPackage=com.ebnews    appActivity=.activity.SplashActivity    noReset=true
->>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
+
     等待
     左滑
     等待
@@ -67,16 +57,12 @@
     点击    id=com.ebnews:id/login_tv
 
 检查文本
-    [Arguments]    ${text}
     Page Should Contain Text    ${text}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 上滑
     swipe    60    1534    13    808    1750
-=======
-=======
->>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
+
 我的消息
     点击    xpath=//android.widget.TextView[contains(@text,'我的消息')]
 
@@ -143,7 +129,4 @@
 
 获取元素值
     Get Text    ${text}
-<<<<<<< HEAD
->>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
-=======
->>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
+
