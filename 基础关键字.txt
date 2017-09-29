@@ -3,7 +3,7 @@
     Swipe    1000    1080    13    1080    1000
 
 点击
-    Click Element    ${test}   
+    Click Element    ${test}    
 
 等待
     sleep    10
