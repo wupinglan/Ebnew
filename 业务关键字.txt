@@ -3,13 +3,130 @@ Resource          基础关键字.txt
 
 *** Keywords ***
 登录
-    启动Andriod    Ebnew_V4.4.0_线上.apk
+    启动andriod不需要安装app
     等待
     我的
     等待
     登录/注册
+    Clear Text    id=com.ebnews:id/login_username
+    等待
     用户名    18610851331
-    密码    wupinglan123
+    等待
+    密码    wu123456
     登录按钮
     等待
-    检查文本    wupinglan
+    检查文本    测试小雨
+
+IOS
+    启动IOS    /Users/wupinglan/Downloads/SmartMonth.app
+    点击    id=Allow
+    等待
+    点击    id=立即更新
+
+我的消息业务
+    等待
+    我的
+    等待
+    我的消息
+    等待
+    检查文本    回复我
+    等待
+    通知
+    等待
+    回复我的
+    等待
+    我的消息返回
+    等待
+
+我的收藏业务
+    等待
+    我的收藏
+    等待
+    检查文本    收藏
+    等待
+    我的收藏返回
+
+阅读历史业务
+    等待
+    历史阅读
+    等待
+    检查文本    阅读
+    等待
+    我的收藏返回
+
+每日签到业务
+    等待
+    每日签到
+    等待
+    Get Contexts
+    sleep    20
+    Switch To Context    WEBVIEW_com.ebnews
+    等待
+    Get Text    id=my-integral
+    等待
+    Switch To Context    NATIVE_APP
+    检查文本    签到
+    等待
+    我的收藏返回
+
+积分任务业务
+    等待
+    积分任务
+    等待
+    检查文本    今日完成任务
+    等待
+    我的收藏返回
+
+积分商城业务
+    等待
+    积分商城
+    等待
+    检查文本    积分
+    等待
+    积分商城返回
+
+我要爆料业务
+    Run Keyword And Continue On Failure    等待
+    我要爆料
+    等待
+    检查文本    你的消息属于哪个行业?
+    等待
+    零售
+    等待
+    下一步
+    等待
+    检查文本    真实的联系方式有助于您的信息被核实发布(手机号、微信号选填其中一项即可)
+    等待
+    点击    id=com.ebnews:id/etContent
+    等待
+    输入    id=com.ebnews:id/etContent    hhhhhhh
+    等待
+    输入    id=com.ebnews:id/etPhone    18610851331
+    等待
+    输入    id=com.ebnews:id/etName    hahah
+    等待
+    提交
+    等待
+    检查文本    我的积分
+
+意见反馈业务
+    Run Keyword And Continue On Failure    等待
+    意见反馈
+    等待
+    检查文本    我要反馈
+    等待
+    输入    id=com.ebnews:id/feedbackEt    xiaouw
+    等待
+    输入    id=com.ebnews:id/feedback_contact    18610851331
+    等待
+    提交
+
+设置业务
+    等待
+    上滑
+    等待
+    设置
+    等待
+    检查文本    退出登录
+    等待
+    我的收藏返回
