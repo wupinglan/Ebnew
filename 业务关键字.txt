@@ -4,7 +4,11 @@ Resource          基础关键字.txt
 *** Keywords ***
 登录
 <<<<<<< HEAD
+<<<<<<< HEAD
     启动Android    Ebnew_V4.4.2_测试.apk
+=======
+    启动andriod不需要安装app
+>>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
 =======
     启动andriod不需要安装app
 >>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
@@ -12,6 +16,7 @@ Resource          基础关键字.txt
     我的
     等待
     登录/注册
+<<<<<<< HEAD
 <<<<<<< HEAD
     用户名    18501982815
     密码    123456
@@ -32,6 +37,8 @@ Resource          基础关键字.txt
     等待
     点击    id=com.ebnews:id/headerBackImg
 =======
+=======
+>>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
     Clear Text    id=com.ebnews:id/login_username
     等待
     用户名    18610851331
@@ -154,4 +161,7 @@ IOS
     检查文本    退出登录
     等待
     我的收藏返回
+<<<<<<< HEAD
+>>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
+=======
 >>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
