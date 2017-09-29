@@ -27,6 +27,7 @@ Resource          基础关键字.txt
     等待
     点击    xpath=//android.widget.TextView[contains(@text,'北京测试广告列表第二位')]
     等待
+    我的收藏返回
     点击    id=com.ebnews:id/headerBackImg
     Clear Text    id=com.ebnews:id/login_username
     等待
