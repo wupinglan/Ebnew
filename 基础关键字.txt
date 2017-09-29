@@ -1,9 +1,9 @@
-﻿*** Keywords ***
+*** Keywords ***
 左滑
     Swipe    1000    1080    13    1080    1000
 
 点击
-    Click Element    ${test}    
+    Click Element    ${test}
 
 等待
     sleep    10
@@ -20,7 +20,11 @@
 截图
     Capture Page Screenshot
 
-启动andriod
+启动Android
+    Run Keyword And Continue On Failure    Open Application    http://localhost:4723/wd/hub    platformName=Android    platformVersion=5.0    deviceName=c238b674    app=/Users/wupinglan/Documents/workSpace/automation/res/app/android/${app}
+    ...    appPackage=com.ebnews    appActivity=.activity.SplashActivity    noReset=true
+
+滑动起始
     等待
     左滑
     等待
