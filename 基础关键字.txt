@@ -7,7 +7,7 @@
     Click Element    ${test}
 
 等待
-    sleep    15
+    sleep    10
 
 输入
     [Arguments]    ${element}    ${text}
@@ -22,10 +22,15 @@
 截图
     Capture Page Screenshot
 
-启动Andriod
+启动Android
     [Arguments]    ${app}
-    Run Keyword And Continue On Failure    Open Application    http://0.0.0.0:4723/wd/hub    platformName=Android    platformVersion=6.0    deviceName=P4M7N15510010692    app=/Users/wupinglan/Documents/workSpace/automation/res/app/android/${app}
+<<<<<<< HEAD
+    Run Keyword And Continue On Failure    Open Application    http://localhost:4723/wd/hub    platformName=Android    platformVersion=7.0    deviceName=TWGDU16603004489    app=D:\Ebnew_V4.4.2_测试.apk
+    ...    appPackage=com.ebnews    appActivity=.activity.SplashActivity
+=======
+    Run Keyword And Continue On Failure    Open Application    http://localhost:4723/wd/hub    platformName=Android    platformVersion=5.0    deviceName=c238b674    app=/Users/wupinglan/Documents/workSpace/automation/res/app/android/${app}
     ...    appPackage=com.ebnews    appActivity=.activity.SplashActivity    noReset=true
+>>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
     等待
     左滑
     等待
@@ -38,7 +43,7 @@
 
 启动IOS
     [Arguments]    ${app}
-    Open Application    http://0.0.0.0:4723/wd/hub    platformName=ios    platformVersion=10.2    udid=6A69CA14-42FF-4878-87A9-6A26F322995E    app=${app}    deviceName=iPhone
+    Open Application    http://localhost:4723/wd/hub    platformName=ios    platformVersion=10.2    udid=6A69CA14-42FF-4878-87A9-6A26F322995E    app=${app}    deviceName=iPhone
     ...    automationName=XCUITest
 
 我的
@@ -61,3 +66,75 @@
 检查文本
     [Arguments]    ${text}
     Page Should Contain Text    ${text}
+
+<<<<<<< HEAD
+上滑
+    swipe    60    1534    13    808    1750
+=======
+我的消息
+    点击    xpath=//android.widget.TextView[contains(@text,'我的消息')]
+
+我的收藏
+    点击    xpath=//android.widget.TextView[contains(@text,'我的收藏')]
+
+历史阅读
+    点击    xpath=//android.widget.TextView[contains(@text,'历史阅读')]
+
+每日签到
+    点击    xpath=//android.widget.TextView[contains(@text,'每日签到')]
+
+积分任务
+    点击    xpath=//android.widget.TextView[contains(@text,'积分任务')]
+
+积分商城
+    点击    xpath=//android.widget.TextView[contains(@text,'积分商城')]
+
+我要爆料
+    点击    xpath=//android.widget.TextView[contains(@text,'我要爆料')]
+
+意见反馈
+    点击    xpath=//android.widget.TextView[contains(@text,'意见反馈')]
+
+设置
+    点击    xpath=//android.widget.TextView[contains(@text,'设置')]
+
+我的消息返回
+    点击    id=com.ebnews:id/ivHeaderBack
+
+回复我的
+    点击    xpath=//android.widget.TextView[contains(@text,'回复我的')]
+
+通知
+    点击    xpath=//android.widget.TextView[contains(@text,'通知')]
+
+启动andriod不需要安装app
+    Open Application    http://localhost:4723/wd/hub    platformName=Android    platformVersion=5.0    deviceName=C238B674    appPackage=com.ebnews    appActivity=.activity.SplashActivity
+    ...    noReset=true
+
+我的收藏返回
+    点击    id=com.ebnews:id/headerImgBack
+
+积分商城返回
+    点击    id=com.ebnews:id/header_img_back
+
+下一步
+    点击    id=com.ebnews:id/tvHeaderRight
+
+零售
+    点击    xpath=//android.widget.TextView[contains(@text,'零售')]
+
+提交
+    点击    xpath=//android.widget.TextView[contains(@text,'提交')]
+
+上滑
+    Swipe    130    1588    130    838    1000
+
+切换contexts
+    Switch To Context
+
+清除
+    Clear Text    ${test}
+
+获取元素值
+    Get Text    ${text}
+>>>>>>> 1c1aacfdfef9f7605f6f6260198e3134b32350d1
