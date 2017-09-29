@@ -3,7 +3,7 @@
     Swipe    1000    1080    13    1080    1000
 
 点击
-    Click Element    ${test}
+    Click Element    ${test}    
 
 等待
     sleep    10
@@ -24,6 +24,8 @@
     Run Keyword And Continue On Failure    Open Application    http://localhost:4723/wd/hub    platformName=Android    platformVersion=5.0    deviceName=c238b674    app=/Users/wupinglan/Documents/workSpace/automation/res/app/android/${app}
     ...    appPackage=com.ebnews    appActivity=.activity.SplashActivity    noReset=true
 
+启动andriod
+>>>>>>> 10e02af0b8ff95320e0ea1360749933580a538a0
     等待
     左滑
     等待
@@ -35,7 +37,6 @@
     我知道了
 
 启动IOS
-    [Arguments]    ${app}
     Open Application    http://localhost:4723/wd/hub    platformName=ios    platformVersion=10.2    udid=6A69CA14-42FF-4878-87A9-6A26F322995E    app=${app}    deviceName=iPhone
     ...    automationName=XCUITest
 
@@ -46,11 +47,9 @@
     点击    xpath=//android.widget.TextView[contains(@text,'登录/注册')]
 
 用户名
-    [Arguments]    ${text}
     输入    id=com.ebnews:id/login_username    ${text}
 
 密码
-    [Arguments]    ${text}
     输入    id=com.ebnews:id/login_pwd    ${text}
 
 登录按钮
@@ -58,7 +57,6 @@
 
 检查文本
     Page Should Contain Text    ${text}
-
 
 上滑
     swipe    60    1534    13    808    1750
@@ -116,7 +114,7 @@
     点击    xpath=//android.widget.TextView[contains(@text,'零售')]
 
 提交
-    点击    xpath=//android.widget.TextView[contains(@text,'提交')]
+    点击    xpath=//android.widget.TextView[contains(@text,'提交')]    咩咩咩咩
 
 上滑
     Swipe    130    1588    130    838    1000
@@ -129,4 +127,3 @@
 
 获取元素值
     Get Text    ${text}
-
