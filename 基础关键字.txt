@@ -3,8 +3,7 @@
     Swipe    1000    1080    13    1080    1000
 
 点击
-    Click Element    ${test}
-
+    Click Element    ${test}    
 等待
     sleep    10
 
@@ -109,7 +108,8 @@
     点击    xpath=//android.widget.TextView[contains(@text,'零售')]
 
 提交
-    点击    xpath=//android.widget.TextView[contains(@text,'提交')]
+    点击    xpath=//android.widget.TextView[contains(@text,'提交')]    咩咩咩咩
+
 上滑
     Swipe    130    1588    130    838    1000
 
